@@ -18,19 +18,19 @@
         </ul>
         @endif
     </div>
-    <div class="maindiv">
-        <form action="" method="post">
+    <div>
+        <form method="post" action="{{route('products.update', ['product' => $product])}}">
             @csrf
-            @method('post')
+            @method('put')
             <label for="name">Name</label>
-            <input type="text" name="name" placeholder="{{$product->name}}">
-            <label for="qty">Quantity</label>
-            <input type="text" name="qty" placeholder="{{$product->qty}}">
-            <label for="price">Price</label>
-            <input type="text" name="price" placeholder="{{$product->price}}">
-            <label for="description">Description</label>
-            <input type="text" name="description" placeholder="{{$product->description}}">
-            <button type="submit"> Update </button>
+            <input type="text" name="name" value="{{$product->name}}">
+            <label for=" qty">Quantity</label>
+            <input type="text" name="qty" value="{{$product->qty}}">
+            <label for=" price">Price</label>
+            <input type="text" name="price" value="{{$product->price}}">
+            <label for=" description">Description</label>
+            <input type="text" name="description" value="{{$product->description}}">
+            <button type=" submit"> Update </button>
         </form>
     </div>
 </body>

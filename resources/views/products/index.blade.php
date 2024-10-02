@@ -10,6 +10,13 @@
 <body>
     <h1>Products</h1>
     <div>
+        <div>
+            @if(session()->has('success'))
+            <div>
+                {{session('success')}}
+            </div>
+            @endif
+        </div>
         <table border="1">
             <tr>
                 <th>ID</th>
