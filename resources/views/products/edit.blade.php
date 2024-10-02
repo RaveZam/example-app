@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Create Section!</h1>
+    <h1>Edit {{$product->name}}</h1>
     <div>
         @if($errors->any())
         <ul>
@@ -19,18 +19,18 @@
         @endif
     </div>
     <div class="maindiv">
-        <form action="{{route('products.store')}}" method="post">
+        <form action="" method="post">
             @csrf
             @method('post')
             <label for="name">Name</label>
-            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="name" placeholder="{{$product->name}}">
             <label for="qty">Quantity</label>
-            <input type="text" name="qty" placeholder="Quantity">
+            <input type="text" name="qty" placeholder="{{$product->qty}}">
             <label for="price">Price</label>
-            <input type="text" name="price" placeholder="Price">
+            <input type="text" name="price" placeholder="{{$product->price}}">
             <label for="description">Description</label>
-            <input type="text" name="description" placeholder="Description">
-            <button type="submit"> Submit </button>
+            <input type="text" name="description" placeholder="{{$product->description}}">
+            <button type="submit"> Update </button>
         </form>
     </div>
 </body>
