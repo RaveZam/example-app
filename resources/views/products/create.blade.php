@@ -10,6 +10,7 @@
 <body>
     <h1>Create Section!</h1>
     <div>
+        <a href="{{route('products.index')}}">Return to Index</a>
         @if($errors->any())
         <ul>
             @foreach ($errors as $error )
@@ -31,6 +32,7 @@
             <label for="description">Description</label>
             <input type="text" name="description" placeholder="Description">
             <button type="submit"> Submit </button>
+
         </form>
     </div>
 </body>

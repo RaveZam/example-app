@@ -9,6 +9,7 @@
 
 <body>
     <h1>Edit {{$product->name}}</h1>
+    <a href="{{route('products.index')}}">Return To Index</a>
     <div>
         @if($errors->any())
         <ul>
